@@ -1,0 +1,15 @@
+# 1. Project Name
+
+project(include)
+
+# 2. Env (Include/Lib Path, C/CXX/LD FLAGS)
+
+# 4. Sub Projects
+
+# 5. Project Install
+
+install(DIRECTORY pinyin DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY associate DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY edic DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY stroke DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY wubi DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
