@@ -100,7 +100,7 @@ bool CombineAssociateCandidate::getFirstCombine(const std::string &input, std::s
 			else
 			{
 				can.size += firstCan.size;
-				can.pinyin += ("'" + std::string(firstCan.pinyin));
+				can.pinyin += (std::string("'") + std::string(firstCan.pinyin));
 				can.cizu += firstCan.cizu;
 				size_t n = StringFunction::findCharTimes(sSearch, '\'', firstCan.size);
 				sSearch = n == std::string::npos ? "" : sSearch.substr(n + 1);
@@ -125,6 +125,8 @@ bool CombineAssociateCandidate::getFirstCombine(const std::string &input, std::s
 		}
 		++nKick;
 	}
+	if (!can.pinyin.empty() && can.pinyin.front() == '\'')
+		can.pinyin.erase(can.pinyin.begin());
 	m_candidates.push_back(can);
 	return true;
 }
@@ -155,7 +157,7 @@ bool CombineAssociateCandidate::getSecondCombine(const std::string &input)
 	if (PinyinHanzi::isIndependentHanzi(wsFirstHanzi))
 	{
 		can.size += 1;
-		can.pinyin += ("'" + sCompletePinyin);
+		can.pinyin = sCompletePinyin;
 		can.cizu += StringFunction::unicodeToUtf8(wsFirstHanzi);
 		size_t n = StringFunction::findCharTimes(sSearch, '\'', 1);
 		sSearch = n == std::string::npos ? "" : sSearch.substr(n + 1);
@@ -168,7 +170,7 @@ bool CombineAssociateCandidate::getSecondCombine(const std::string &input)
 			if (bHasQueryRecord)
 			{
 				can.size += firstCan.size;
-				can.pinyin += firstCan.pinyin;
+				can.pinyin += (std::string("'") + firstCan.pinyin);
 				can.cizu += firstCan.cizu;
 				size_t n = StringFunction::findCharTimes(sSearch, '\'', firstCan.size);
 				sSearch = n == std::string::npos ? "" : sSearch.substr(n + 1);
@@ -212,7 +214,7 @@ bool CombineAssociateCandidate::getThirdCombine(const std::string &input, const 
 	size_t n = StringFunction::findCharTimes(input, '\'', firstCizu.size() + 1);
 	std::string sSearch = n == std::string::npos ? "" : input.substr(n + 1);
 	can.size += (firstCizu.size() + 1);
-	can.pinyin += (firstPinyins + "'" + sCompletePinyin + "'");
+	can.pinyin += (firstPinyins + "'" + sCompletePinyin);
 	can.cizu += (StringFunction::unicodeToUtf8(firstCizu) + StringFunction::unicodeToUtf8(wsHanzi));
 	while (!sSearch.empty())
 	{
@@ -223,7 +225,7 @@ bool CombineAssociateCandidate::getThirdCombine(const std::string &input, const 
 		if (bHasQueryRecord)
 		{
 			can.size += firstCan.size;
-			can.pinyin += firstCan.pinyin;
+			can.pinyin += (std::string("'") + firstCan.pinyin);
 			can.cizu += firstCan.cizu;
 			size_t n = StringFunction::findCharTimes(sSearch, '\'', firstCan.size);
 			sSearch = n == std::string::npos ? "" : sSearch.substr(n + 1);

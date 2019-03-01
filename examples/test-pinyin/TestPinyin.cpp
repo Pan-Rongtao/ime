@@ -57,7 +57,7 @@ void TestPinyin::OnFunctionKeyInput(int f)
 	case 12: 
 	{
 		auto k = std::chrono::high_resolution_clock::now();
-			m_pinyin.search("prtshishabi");
+			m_pinyin.search("tapotipotipoti");
 			showPageCandidate(1);
 		m_pinyin.search("wohxhkhkhkhkhkhkhkhkhkhkhkhkhkkhkhkhkhkhkhkhkhkhkhhkhkhkhkhkhkhkhhkh");
 		//	m_pinyin.learn("j'sha", u8"给杀");
@@ -165,8 +165,7 @@ void TestPinyin::OnNumberInput(unsigned int n)
 
 void TestPinyin::OnEscInput()
 {
-	m_inputPinyin.clear();
-	newSearch(m_inputPinyin);
+	finished();
 }
 
 void TestPinyin::OnEnterInput()
