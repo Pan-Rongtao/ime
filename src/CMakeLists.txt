@@ -13,6 +13,9 @@ add_subdirectory(associate)
 add_subdirectory(edic)
 add_subdirectory(stroke)
 add_subdirectory(wubi)
+if(WIN32)
+	add_subdirectory(hwr)
+endif()
 
 # 5. Project Install
 # N/A

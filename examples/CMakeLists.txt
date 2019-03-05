@@ -19,5 +19,6 @@ add_subdirectory(test-associate)
 add_subdirectory(test-edic)
 add_subdirectory(test-stroke)
 add_subdirectory(test-wubi)
+add_subdirectory(test-hwr)
 
 # 5. Project Install

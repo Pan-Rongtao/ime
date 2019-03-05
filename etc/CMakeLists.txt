@@ -10,4 +10,5 @@ project(resource)
 # 5. Project Install
 file(GLOB SOURCES *.db)
 install(FILES ${SOURCES} DESTINATION ${CMAKE_INSTALL_ETCDIR})
+install(DIRECTORY hwr DESTINATION ${CMAKE_INSTALL_ETCDIR})
 
