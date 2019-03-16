@@ -10,6 +10,7 @@ cmake_policy(VERSION 2.6)
 project(ime)
 
 # 2. Env (Include/Lib Path, C/CXX/LD FLAGS)
+set(CMAKE_DEBUG_POSTFIX d)
 
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL QNX)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")

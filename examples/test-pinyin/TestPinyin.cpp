@@ -7,11 +7,7 @@
 #include <algorithm>
 #include "../test-share/Encoding.h"
 
-#ifdef WIN32
-#define ETC_DIR				std::string("../../etc/")
-#else
 #define ETC_DIR				std::string("../etc/")
-#endif
 #define SEPERATOR_LINE		std::string("---------------------------------")
 
 TestPinyin::TestPinyin()

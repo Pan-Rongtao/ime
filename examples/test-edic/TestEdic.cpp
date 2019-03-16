@@ -2,11 +2,7 @@
 #include "../test-share/Encoding.h"
 #include <chrono>
 
-#ifdef WIN32
-#define ETC_DIR				std::string("../../etc/")
-#else
 #define ETC_DIR				std::string("../etc/")
-#endif
 #define SEPERATOR_LINE		std::string("---------------------------------")
 
 TestEdic::TestEdic()
