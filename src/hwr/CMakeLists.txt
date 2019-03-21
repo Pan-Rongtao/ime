@@ -24,6 +24,7 @@ set(LIB_NAME "hwr")
 file(GLOB SRC_FILES "${CMAKE_SOURCE_DIR}/include/${PROJECT_NAME}/*.h" "*.h" "*.cpp")
 
 add_library(${LIB_NAME} SHARED ${SRC_FILES})
+set_target_properties(${LIB_NAME} PROPERTIES OUTPUT_NAME ImeHwr)
 target_link_libraries(${LIB_NAME} hci_sys hci_hwr)
 
 # 4. Project Install

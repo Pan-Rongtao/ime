@@ -24,6 +24,7 @@ set(LIB_NAME "wubi")
 file(GLOB SRC_FILES "${CMAKE_SOURCE_DIR}/include/${PROJECT_NAME}/*.h" "*.h" "*.cpp")
 
 add_library(${LIB_NAME} SHARED ${SRC_FILES})
+set_target_properties(${LIB_NAME} PROPERTIES OUTPUT_NAME ImeWubi)
 target_link_libraries(${LIB_NAME} sqlite3)
 
 # 4. Project Install
