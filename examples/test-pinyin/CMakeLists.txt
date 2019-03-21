@@ -23,6 +23,7 @@ set(BIN_NAME "test-pinyin")
 
 file(GLOB SRC_FILES "*.h" "*.cpp" "../test-share/*.h" "../test-share/*.cpp")
 add_executable(${BIN_NAME} ${SRC_FILES})
+set_target_properties(${BIN_NAME} PROPERTIES OUTPUT_NAME uit.${BIN_NAME})
 target_link_libraries(${BIN_NAME} pinyin)
 
 # 4. Project Install
