@@ -202,7 +202,7 @@ void TestPinyin::init(const std::string & configPath, bool enableCombieCandidate
 {
 	printf("【init】\n\n");
 	auto beg = std::chrono::high_resolution_clock::now();
-	bool b = m_pinyin.init(configPath + "system-py.db", configPath + "learn-py.db");
+	bool b = m_pinyin.init(configPath + "ime.pinyin.system.db", configPath + "ime.pinyin.learn.db");
 	m_pinyin.enableAICombineCandidate(enableCombieCandidate);
 	m_pinyin.enableAssociateCandidate(enableAssociateCandidate);
 	m_pinyin.setCandidatePageSize(pageSize);

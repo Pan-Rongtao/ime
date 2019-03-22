@@ -8,7 +8,7 @@
 TestStroke::TestStroke()
 {
 	m_ipt.setEvent(this);
-	init(ETC_DIR + "stroke.db", 9);
+	init(ETC_DIR + "ime.stroke.db", 9);
 }
 
 void TestStroke::run()

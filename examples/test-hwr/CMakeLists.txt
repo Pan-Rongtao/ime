@@ -23,7 +23,7 @@ set(BIN_NAME "test-hwr")
 
 file(GLOB SRC_FILES "*.h" "*.cpp" "../test-share/*.h" "../test-share/*.cpp")
 add_executable(${BIN_NAME} ${SRC_FILES})
-set_target_properties(${BIN_NAME} PROPERTIES OUTPUT_NAME uit.${BIN_NAME})
+set_target_properties(${BIN_NAME} PROPERTIES OUTPUT_NAME ime.${BIN_NAME})
 target_link_libraries(${BIN_NAME} hwr)
 
 # 4. Project Install

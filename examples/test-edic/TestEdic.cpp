@@ -8,7 +8,7 @@
 TestEdic::TestEdic()
 {
 	m_ipt.setEvent(this);
-	init(ETC_DIR + "edic.db", 9);
+	init(ETC_DIR + "ime.edic.db", 9);
 }
 
 void TestEdic::run()

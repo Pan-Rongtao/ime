@@ -8,7 +8,7 @@
 TestAssociate::TestAssociate()
 {
 	m_ipt.setEvent(this);
-	init(ETC_DIR + "associate.db", 9);
+	init(ETC_DIR + "ime.associate.db", 9);
 }
 
 void TestAssociate::run()

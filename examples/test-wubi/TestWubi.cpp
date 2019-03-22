@@ -8,7 +8,7 @@
 TestWubi::TestWubi()
 {
 	m_ipt.setEvent(this);
-	init(ETC_DIR + "wubi.db", 9);
+	init(ETC_DIR + "ime.wubi.db", 9);
 }
 
 void TestWubi::run()
