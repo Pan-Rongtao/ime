@@ -2,7 +2,7 @@
 #include "../test-share/Encoding.h"
 #include <chrono>
 
-#define ETC_DIR				std::string("../etc/")
+#define ETC_DIR				std::string("../etc/hwr/")
 #define SEPERATOR_LINE		std::string("---------------------------------")
 
 std::vector<short> points{
@@ -126,7 +126,7 @@ void TestHwr::OnEscInput()
 void TestHwr::init(const std::string &configPath, int pageSize)
 {
 	auto beg = std::chrono::high_resolution_clock::now();
-	bool b = m_hwr.init(configPath, "f95d54c0", "cfa2180825c7a146c400cabcc56403fd", "api.hcicloud.com:8888", configPath + "/hwr", "./");
+	bool b = m_hwr.init(configPath, "f95d54c0", "cfa2180825c7a146c400cabcc56403fd", "api.hcicloud.com:8888", configPath, "./");
 	m_hwr.setCandidatePageSize(pageSize);
 	auto cost = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - beg);
 	printf("init hwr engine %s, cost [%d] ms, config [%s], pageSize [%d]\n", b ? "success" : "fail", (int)cost.count(), configPath.data(), pageSize);
