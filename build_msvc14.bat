@@ -9,4 +9,5 @@ cmake -DCMAKE_INSTALL_PREFIX=../dist -G "Visual Studio 14 2015" ..
 @%msbuild_execute% INSTALL.vcxproj /p:Configuration="debug"
 @%msbuild_execute% INSTALL.vcxproj /p:Configuration="release"
 
+cd ..
 @pause

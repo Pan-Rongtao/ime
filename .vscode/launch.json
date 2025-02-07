@@ -1,0 +1,75 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "test-pinyin",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-pinyin.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test-associate",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-associate.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test-edic",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-edic.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test-wubi",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-wubi.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test-stroke",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-stroke.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test-hwr",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/bin/ime.test-hwr.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist/lib",
+            "environment": [],
+            "console": "integratedTerminal"
+        }
+
+    ]
+}

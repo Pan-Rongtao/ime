@@ -1,9 +1,5 @@
-
 # 0. CMake Defs
-
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-
-cmake_policy(VERSION 2.6)
+cmake_minimum_required(VERSION 3.5)
 
 # 1. Project Name
 
@@ -15,6 +11,9 @@ set(CMAKE_DEBUG_POSTFIX d)
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL QNX)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 else()
+	if(WIN32)
+		add_compile_options(/wd4996)
+	endif()
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 endif()
 
